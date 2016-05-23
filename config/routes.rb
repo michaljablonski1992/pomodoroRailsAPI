@@ -3,16 +3,12 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
-  namespace :api do
-    namespace :v1 do
-      post 'api/signup'
-      post 'api/signin'
-      post 'api/reset_password'
+  post 'api/signup'
+  post 'api/signin'
+  post 'api/reset_password'
 
-      get 'api/get_token'
-      get 'api/clear_token'
-    end
-  end
+  get 'api/get_token'
+  get 'api/clear_token'
 
   match "*path", to: "application#page_not_found", via: :all
 

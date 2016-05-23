@@ -1,4 +1,4 @@
-class Api::V1::BaseController < ApplicationController
+class BaseController < ApplicationController
   before_action :force_json
   respond_to :json
 
