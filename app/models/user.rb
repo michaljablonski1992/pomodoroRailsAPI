@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 
   validates_format_of :email, :with => /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
   validates_uniqueness_of :email
-
+    
   def encrypt_password
     if password.present?
       self.password_salt = BCrypt::Engine.generate_salt
